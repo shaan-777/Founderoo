@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Founderoo</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">Founderoo</div>
+    <div class="navbar-links">
+      <a href="#">How It Works</a>
+      <a href="#">Success Stories</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact</a>
+      <div class="toggle-switch">
+        <input type="checkbox" id="themeToggle" />
+        <span>Dark</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Got an Idea? Get Funded.</h1>
+    <p>Start your founder journey with Founderoo. We support idea-stage founders with capital, coaching, and connections.</p>
+    <button class="cta">Pay ₹499 & Apply Now</button>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How Founderoo Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Apply Now</h3>
+        <p>Submit your startup idea and pay a ₹499 registration fee. Our team will review your application thoroughly.</p>
+        <div class="step-footer">
+          <strong>₹499 registration fee</strong><br/>
+          <span>Non-refundable application review</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Shortlisted?</h3>
+        <p>If shortlisted, pay ₹1,999 for the final interview with our investment committee and expert mentors.</p>
+        <div class="step-footer">
+          <strong>₹1,999 for final interview</strong><br/>
+          <span>50% refundable if not selected</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Get Funded</h3>
+        <p>Selected founders receive funding, personalized mentorship, and access to our extensive network of industry experts.</p>
+        <div class="step-footer">
+          <strong>Access to capital</strong><br/>
+          <span>Plus mentorship and network</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="success-stories">
+    <h2>Success Stories</h2>
+    <p class="subtitle">Hear from founders who turned their ideas into thriving businesses with Founderoo's support.</p>
+    
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="avatar">👤</div>
+        <h3>Priya Sharma</h3>
+        <p class="role">Founder, EcoBasket</p>
+        <p class="story">Founderoo believed in my sustainable grocery delivery idea when no one else did. With their ₹15 lakh funding and mentorship, we’ve grown to serve 5 cities in just 18 months.</p>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="testimonial">
+        <div class="avatar">👤</div>
+        <h3>Rahul Kapoor</h3>
+        <p class="role">CEO, TechBuddy</p>
+        <p class="story">I was just a college student with an AI tutoring idea. Founderoo not only funded us with ₹10 lakhs but connected me with tech industry veterans who helped refine our product. We now have 50,000+ users!</p>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="testimonial">
+        <div class="avatar">👤</div>
+        <h3>Aisha Patel</h3>
+        <p class="role">Founder, HealthFirst</p>
+        <p class="story">The ₹499 application fee was the best investment I ever made. Founderoo funded my healthcare app with ₹20 lakhs and their mentors helped us navigate regulatory challenges. We’re now expanding nationwide.</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <h2>Ready to Turn Your Idea Into Reality?</h2>
+    <p>Join hundreds of founders who have successfully launched their startups with Founderoo's support.</p>
+    <button class="cta-button">Pay ₹499 & Apply Now</button>
+  </section>
+
+  <section class="terms-conditions">
+  <div class="terms-box">
+    <h3>Application Fee</h3>
+    <p>The ₹499 application fee is non-refundable and covers the cost of reviewing your application. This fee ensures that we receive serious applications and can dedicate proper time to evaluate each one.</p>
+
+    <h3>Interview Fee</h3>
+    <p>If shortlisted, the ₹1,999 interview fee is required to proceed to the final stage. 50% (₹999.50) will be refunded if your startup is not selected after the interview process.</p>
+
+    <h3>Selection Process</h3>
+    <p>Selection is based on the viability of your idea, market potential, and founder capabilities. All decisions made by the Founderoo investment committee are final.</p>
+
+    <div class="terms-footer">
+      By submitting your application and paying the fee, you agree to these terms and conditions. Founderoo reserves the right to modify these terms at any time.
+    </div>
+  </div>
+</section>
+
+
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        How much funding can I expect?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        Funding depends on the stage of your startup and pitch quality. Typical amounts range from $10,000 to $100,000.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        Do I need a complete business plan?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        No, a clear idea and a problem-solution overview are sufficient to start your application.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        How long does the application process take?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        The process usually takes 1-2 weeks from application to decision.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        What equity stake does Founderoo take?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        Founderoo typically takes between 5% to 10% equity depending on funding and support provided.
+      </div>
+    </div>
+  </div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Founderoo</h3>
+      <p>Turning ideas into funded startups.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Success Stories</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: hello@founderoo.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2023 Founderoo. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
