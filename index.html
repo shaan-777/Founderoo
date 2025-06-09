@@ -4,14 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Founderoo</title>
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .theme-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .theme-icon input[type="checkbox"] {
+      display: none;
+    }
+
+    .theme-icon span {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      display: none;
+    }
+
+    .faq-answer.open {
+      display: block;
+    }
+
+    .arrow.open {
+      transform: rotate(180deg);
+    }
+  </style>
 </head>
+
 <body>
   <nav class="navbar">
     <div class="navbar-logo">Founderoo</div>
@@ -20,10 +74,10 @@
       <a href="#">Success Stories</a>
       <a href="#">FAQ</a>
       <a href="#">Contact</a>
-      <div class="toggle-switch">
+      <label class="theme-icon" title="Toggle dark mode">
         <input type="checkbox" id="themeToggle" />
-        <span>Dark</span>
-      </div>
+        <span>🌙</span>
+      </label>
     </div>
   </nav>
 
@@ -69,7 +123,6 @@
   <section class="success-stories">
     <h2>Success Stories</h2>
     <p class="subtitle">Hear from founders who turned their ideas into thriving businesses with Founderoo's support.</p>
-    
     <div class="testimonials">
       <div class="testimonial">
         <div class="avatar">👤</div>
@@ -104,22 +157,21 @@
   </section>
 
   <section class="terms-conditions">
-  <div class="terms-box">
-    <h3>Application Fee</h3>
-    <p>The ₹499 application fee is non-refundable and covers the cost of reviewing your application. This fee ensures that we receive serious applications and can dedicate proper time to evaluate each one.</p>
+    <div class="terms-box">
+      <h3>Application Fee</h3>
+      <p>The ₹499 application fee is non-refundable and covers the cost of reviewing your application. This fee ensures that we receive serious applications and can dedicate proper time to evaluate each one.</p>
 
-    <h3>Interview Fee</h3>
-    <p>If shortlisted, the ₹1,999 interview fee is required to proceed to the final stage. 50% (₹999.50) will be refunded if your startup is not selected after the interview process.</p>
+      <h3>Interview Fee</h3>
+      <p>If shortlisted, the ₹1,999 interview fee is required to proceed to the final stage. 50% (₹999.50) will be refunded if your startup is not selected after the interview process.</p>
 
-    <h3>Selection Process</h3>
-    <p>Selection is based on the viability of your idea, market potential, and founder capabilities. All decisions made by the Founderoo investment committee are final.</p>
+      <h3>Selection Process</h3>
+      <p>Selection is based on the viability of your idea, market potential, and founder capabilities. All decisions made by the Founderoo investment committee are final.</p>
 
-    <div class="terms-footer">
-      By submitting your application and paying the fee, you agree to these terms and conditions. Founderoo reserves the right to modify these terms at any time.
+      <div class="terms-footer">
+        By submitting your application and paying the fee, you agree to these terms and conditions. Founderoo reserves the right to modify these terms at any time.
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <div class="faq-container">
     <h2>Frequently Asked Questions</h2>
@@ -164,46 +216,144 @@
       </div>
     </div>
   </div>
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>Founderoo</h3>
-      <p>Turning ideas into funded startups.</p>
-    </div>
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">Success Stories</a></li>
-        <li><a href="#">FAQ</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Refund Policy</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h4>Contact Us</h4>
-      <p>Email: hello@founderoo.com</p>
-      <p>Phone: +91 98765 43210</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Founderoo</h3>
+        <p>Turning ideas into funded startups.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Success Stories</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: hello@founderoo.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2023 Founderoo. All rights reserved.</p>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <p>© 2023 Founderoo. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <script src="script.js"></script>
+  <!-- Modal -->
+  <div id="startupModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <form id="startupForm">
+        <h2>Submit Your Startup Idea</h2>
+
+     
+        <div class="form-grid">
+  <input type="text" placeholder="First Name" />
+  <input type="text" placeholder="Last Name" />
+</div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="idea">Startup Idea (brief):</label>
+        <textarea id="idea" name="idea" required></textarea>
+
+        <label for="stage">Startup Stage:</label>
+        <select id="stage" name="stage" required>
+          <option value="">Select</option>
+          <option value="idea">Idea Stage</option>
+          <option value="prototype">Prototype</option>
+          <option value="launched">Launched</option>
+          <option value="revenue">Revenue-Generating</option>
+        </select>
+
+        <label for="linkedin">LinkedIn Profile:</label>
+        <input type="url" id="linkedin" name="linkedin" />
+
+        <label for="team">Team Size:</label>
+        <input type="number" id="team" name="team" min="1" />
+
+        <label for="market">Target Market:</label>
+        <input type="text" id="market" name="market" />
+
+        <label for="website">Website (optional):</label>
+        <input type="url" id="website" name="website" />
+        <div class="input-group">
+  <span class="input-icon"><i class="fas fa-envelope"></i></span>
+  <input type="email" placeholder="Your email">
+</div>
+<!-- <button class="submit-btn" disabled>
+  <span class="spinner"></span> Submitting...
+</button> -->
+
+
+        <button type="submit">Pay ₹499 & Continue</button>
+        <div class="input-group">
+  
+</div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Theme toggle
+    document.getElementById("themeToggle").addEventListener("change", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    // FAQ toggle
+    function toggleFaq(element) {
+      const answer = element.querySelector(".faq-answer");
+      const arrow = element.querySelector(".arrow");
+      answer.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // Modal Logic
+    const modal = document.getElementById("startupModal");
+    const openModalBtns = document.querySelectorAll(".cta, .cta-button");
+    const closeBtn = document.querySelector(".close");
+
+    openModalBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        modal.style.display = "block";
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    document.getElementById("startupForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Form submitted! Redirect to payment gateway.");
+      modal.style.display = "none";
+    });
+  </script>
 </body>
 </html>
