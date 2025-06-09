@@ -764,28 +764,5 @@ body.dark-mode .step-footer {
 .modal-content {
   background: rgb(184, 187, 185);
   backdrop-filter: blur(45px);
-  border: 2px solid rgba(242, 6, 159, 0.957)
-}
-@media screen and (max-width: 768px) {
-  /* Navbar & footer adjustments */
-}
-@media (max-width: 600px) {
-  /* Form grid adjustments */
-}
-.steps, .testimonials, .footer-container {
-  display: flex/grid;
-  flex-wrap: wrap; /* Cards auto-wrap on small screens */
-}
-.step { max-width: 300px; } /* Fixed but wraps */
-.modal-content { max-width: 500px; } /* Responsive container */
-@media (min-width: 769px) { /* Desktop styles */ }
-.step, .testimonial {
-  width: 100%;
-  max-width: 300px; /* Prevents overflow */
-}
-.cta, .navbar-links a {
-  padding: 12px 24px; /* Better for thumbs */
-}
-.avatar {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  border: 2px solid rgba(238, 53, 173, 0.957)
 }
