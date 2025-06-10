@@ -549,78 +549,22 @@ body.dark-mode .step-footer {
 .modal.hidden {
   display: none;
 }
+/* === Modal Base Layout === */
 .modal {
+  display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: flex; align-items: center; justify-content: center;
   z-index: 999;
-}
-.modal-content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-}
-.modal-content input,
-.modal-content textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-}
-.modal-content button {
-  background-color: #5f00ff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.close {
-  float: right;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.modal-content input,
-.modal-content select,
-.modal-content textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-.modal {
-  display: none; 
-  position: fixed;
-  z-index: 999;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
 }
 
+/* === Modal Content Box === */
 .modal-content {
   background-color: #fff;
-  margin: 5% auto;
-  padding: 2rem;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 500px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.modal-content {
-  background: white;
   margin: 5% auto;
   padding: 30px 25px;
   width: 90%;
@@ -631,6 +575,7 @@ body.dark-mode .step-footer {
   font-family: 'Inter', sans-serif;
 }
 
+/* === Modal Content Elements === */
 .modal-content h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
@@ -638,8 +583,7 @@ body.dark-mode .step-footer {
 
 .modal-content label {
   display: block;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px;
   font-weight: 500;
   color: #333;
 }
@@ -656,14 +600,15 @@ body.dark-mode .step-footer {
   border-radius: 8px;
   font-size: 14px;
   outline: none;
-  transition: border-color 0.3s;
   font-family: inherit;
+  transition: border-color 0.3s;
 }
 
 .modal-content input:focus,
 .modal-content textarea:focus,
 .modal-content select:focus {
   border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
 }
 
 .modal-content button[type="submit"] {
@@ -684,6 +629,7 @@ body.dark-mode .step-footer {
   background-color: #574fd6;
 }
 
+/* === Close Button === */
 .modal-content .close {
   position: absolute;
   right: 20px;
@@ -691,12 +637,9 @@ body.dark-mode .step-footer {
   font-size: 1.5rem;
   cursor: pointer;
   color: #555;
-}.modal-content input:focus,
-.modal-content textarea:focus,
-.modal-content select:focus {
-  border-color: #6c63ff;
-  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
 }
+
+/* === Form Groups and Icons === */
 .input-group {
   position: relative;
 }
@@ -712,6 +655,8 @@ body.dark-mode .step-footer {
 .input-group input {
   padding-left: 2.5rem;
 }
+
+/* === Form Error Message === */
 .form-error {
   color: #ff4d4f;
   background: #ffe6e6;
@@ -721,9 +666,12 @@ body.dark-mode .step-footer {
   font-size: 0.9rem;
   display: none;
 }
+
 .form-error.show {
   display: block;
 }
+
+/* === Grid Layout === */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -735,6 +683,8 @@ body.dark-mode .step-footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* === Submit Button Spinner === */
 .submit-btn {
   position: relative;
 }
@@ -755,14 +705,27 @@ body.dark-mode .step-footer {
   0% { transform: rotate(0); }
   100% { transform: rotate(360deg); }
 }
-.modal-content input,
-.modal-content textarea,
-.modal-content select,
-.modal-content button {
-  transition: all 0.3s ease;
+
+/* === Dark Mode === */
+body.dark-mode .modal-content {
+  background: #232323;
+  color: #f0f0f0;
+  border: 1px solid #444;
 }
-.modal-content {
-  background: rgb(184, 187, 185);
-  backdrop-filter: blur(45px);
-  border: 2px solid rgba(238, 53, 173, 0.957)
+
+body.dark-mode .modal-content input,
+body.dark-mode .modal-content textarea,
+body.dark-mode .modal-content select {
+  background: #181818;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+body.dark-mode .modal-content button[type="submit"] {
+  background-color: #5f00ff;
+  color: #fff;
+}
+
+body.dark-mode .modal-content label {
+  color: #e0e0e0;
 }
